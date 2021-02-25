@@ -17,6 +17,7 @@ const Icon = React.forwardRef<HTMLSpanElement, IconComponentProps>((props, ref) 
 			[`${prefixCls}-${icon.name}`]: icon.name,
 			[`${prefixCls}-spin`]: spin || icon.name === 'loading',
 		},
+		className
 	)
 	const svgStyle = rotate ? {
 		transform: `rotate(${rotate}deg)`,
