@@ -1,6 +1,7 @@
 import React from 'react'
 import AlipaySvg from '@kite-design/icons-svg/lib/asn/Alipay'
-import KiteIcon, { IconBaseProps } from '../components/KiteIcon'
+import KiteIcon from '../components/KiteIcon'
+import { IconBaseProps } from '../components/CustomIcon'
 
 const Alipay = (
 	props: IconBaseProps,
