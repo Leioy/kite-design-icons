@@ -1,6 +1,6 @@
 import React from 'react'
 import { IconDefinition } from '@kite-design/icons-svg/lib/types'
-import { generate, useInsertStyles } from '../utils'
+import { generate, svgBaseAttributes, useInsertStyles } from '../utils'
 
 export interface IconProps {
 	icon: IconDefinition
@@ -12,10 +12,7 @@ const IconBase: React.FC<IconProps> = (props) => {
 	useInsertStyles()
 	return generate(icon.icon, `svg-${icon.name}`, {
 		'data-icon': icon.name,
-		width: '1em',
-		height: '1em',
-		fill: 'currentColor',
-		'aria-hidden': 'true',
+		...svgBaseAttributes,
 		...restProps
 	})
 }

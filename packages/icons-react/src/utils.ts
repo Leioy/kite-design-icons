@@ -44,6 +44,13 @@ export function generate (
 	)
 }
 
+export const svgBaseAttributes = {
+	width: '1em',
+	height: '1em',
+	fill: 'currentColor',
+	'aria-hidden': 'true',
+}
+
 export const iconStyles = `
 .kiteicon {
   display: inline-block;
