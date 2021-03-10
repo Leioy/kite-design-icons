@@ -1,7 +1,16 @@
-import React from  'react'
-import {Alipay} from '../src'
+import React, { useEffect, useRef } from 'react'
+import { Alipay } from '../src'
 
-console.log(Alipay)
 export default function () {
-	return <Alipay onClick={e=>console.log(e.target)}/>
+	const ref = useRef(null)
+	useEffect(() => {
+		console.log(ref.current)
+	})
+	return <>
+		<Alipay/>
+		<Alipay spin/>
+		<Alipay rotate={180}/>
+		<Alipay className="xxx" style={{ color: 'red' }}/>
+		<Alipay ref={ref} onClick={(e: any) => console.log(e.target)}/>
+	</>
 }
