@@ -11,6 +11,10 @@
   "generate": "rimraf src/icons && TS_NODE_PROJECT=scripts/tsconfig.json node -r ts-node/register scripts/generate.ts --target=icon",
   "postcompile": "npm run clean && TS_NODE_PROJECT=scripts/tsconfig.json node -r ts-node/register scripts/generate.ts --target=entry"
  },
+	"publishConfig": {
+		"access": "public",
+		"registry": "https://registry.npmjs.org"
+	},
  "peerDependencies": {
   "react": ">=17.0.0"
  },

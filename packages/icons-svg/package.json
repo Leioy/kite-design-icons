@@ -17,6 +17,10 @@
     "build:lib": "tsc --project tsconfig.build.json --module commonjs --outDir lib",
     "build": "yarn build:es && yarn build:lib"
   },
+	"publishConfig": {
+		"access": "public",
+		"registry": "https://registry.npmjs.org"
+	},
   "devDependencies": {
     "@babel/core": "^7.12.13",
     "@babel/preset-env": "^7.12.13",
