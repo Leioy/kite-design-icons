@@ -32,5 +32,6 @@
   "@kite-design/icons-svg": "^0.0.2",
   "clsx": "^1.1.1",
   "insert-css": "^2.0.0"
- }
+ },
+ "gitHead": "ef58bf7675ab7611c99b402bbc06c3a14dc99cb4"
 }
