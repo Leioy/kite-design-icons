@@ -2,14 +2,14 @@
 // DON NOT EDIT IT MANUALLY
 
 import * as React from 'react'
-import AlipaySvg from '@kite-design/icons-svg/lib/asn/Alipay';
+import LeftSvg from '@kite-design/icons-svg/lib/asn/Left';
 import KiteIcon from '../components/KiteIcon'
 import { IconBaseProps } from '../components/CustomIcon'
 
-const Alipay = (
+const Left = (
   props: IconBaseProps,
   ref: React.ForwardedRef<HTMLSpanElement>
-) => <KiteIcon {...props} ref={ref} icon={AlipaySvg} />;
+) => <KiteIcon {...props} ref={ref} icon={LeftSvg} />;
 
-Alipay.displayName = 'Alipay';
-export default React.forwardRef<HTMLSpanElement, IconBaseProps>(Alipay);
+Left.displayName = 'Left';
+export default React.forwardRef<HTMLSpanElement, IconBaseProps>(Left);

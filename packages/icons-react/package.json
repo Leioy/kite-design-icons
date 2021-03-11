@@ -1,24 +1,36 @@
 {
   "name": "@kite-design/icons-react",
   "version": "0.0.1",
-  "main": "index.js",
+	"main": "./lib/index.js",
+	"module": "./es/index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "father doc dev --storybook"
+	  "clean": "./scripts/cleanup.sh",
+    "dev": "father doc dev --storybook",
+	  "compile": "father build",
+	  "generate": "rimraf src/icons && TS_NODE_PROJECT=scripts/tsconfig.json node -r ts-node/register scripts/generate.ts --target=icon",
+	  "postcompile": "npm run clean && TS_NODE_PROJECT=scripts/tsconfig.json node -r ts-node/register scripts/generate.ts --target=entry"
   },
+	"peerDependencies": {
+		"react": ">=17.0.0"
+	},
   "devDependencies": {
     "@types/insert-css": "^2.0.0",
     "@types/react": "^17.0.2",
     "@types/react-dom": "^17.0.1",
+	  "@types/lodash": "^4.14.136",
     "father": "^2.30.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "ts-node": "^9.1.1",
-    "typescript": "^4.1.5"
+    "typescript": "^4.1.5",
+	  "lodash": "^4.17.21",
+	  "rimraf": "^3.0.0"
   },
   "dependencies": {
     "@kite-design/icons-svg": "0.0.1",
     "clsx": "^1.1.1",
-    "insert-css": "^2.0.0"
+    "insert-css": "^2.0.0",
+	  "@babel/runtime": "^7.11.2"
   }
 }
