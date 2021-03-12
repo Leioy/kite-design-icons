@@ -1,8 +1,8 @@
-import React, { HTMLProps } from 'react'
+import * as React from 'react'
 import { svgBaseAttributes, useInsertStyles } from '../utils'
 import clsx from 'clsx'
 
-export interface IconBaseProps extends HTMLProps<HTMLSpanElement> {
+export interface IconBaseProps extends React.HTMLProps<HTMLSpanElement> {
 	spin?: boolean
 	rotate?: number
 }

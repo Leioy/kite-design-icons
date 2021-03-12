@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 import type { IconDefinition } from '@kite-design/icons-svg/lib/types'
 import IconBase from './IconBase'
 import clsx from 'clsx'

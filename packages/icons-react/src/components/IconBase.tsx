@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 import { IconDefinition } from '@kite-design/icons-svg/lib/types'
 import { generate, svgBaseAttributes, useInsertStyles } from '../utils'
 
