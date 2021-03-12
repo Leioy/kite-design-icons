@@ -1,20 +1,17 @@
 import * as allIconDefs from '@kite-design/icons-svg'
-import { IconDefinition } from '@kite-design/icons-svg/es/types'
+
 import * as path from 'path'
 import { promises as fs } from 'fs'
 import { template } from 'lodash'
 
-interface IconDefinitionWithIdentifier extends IconDefinition {
+interface IconDefinitionWithIdentifier {
 	svgIdentifier: string
 }
 
-function walk<T> (fn: (iconDef: IconDefinitionWithIdentifier) => Promise<T>) {
+function walk<T> (fn: (svgIdentifier: string) => Promise<T>) {
 	return Promise.all(
 		Object.keys(allIconDefs)
-			.map(svgIdentifier => {
-				const iconDef = (allIconDefs as { [id: string]: IconDefinition })[svgIdentifier];
-				return fn({ svgIdentifier, ...iconDef });
-			}),
+			.map(svgIdentifier => fn(svgIdentifier)),
 	)
 }
 
@@ -44,7 +41,7 @@ const <%= svgIdentifier %> = (
 export default React.forwardRef<HTMLSpanElement, IconBaseProps>(<%= svgIdentifier %>);
 `.trim());
 	
-	await walk(async ({ svgIdentifier }) => {
+	await walk(async svgIdentifier => {
 		await fs.writeFile(path.resolve(__dirname, `../src/icons/${svgIdentifier}.tsx`), render({ svgIdentifier }))
 	})
 	
@@ -65,7 +62,7 @@ ${entryText}
 	);
 }
 
-async function generateEntries() {
+async function generateEntries () {
 	const render = template(`
 'use strict';
   Object.defineProperty(exports, "__esModule", {
@@ -82,7 +79,7 @@ async function generateEntries() {
   module.exports = _default;
 `.trim());
 	
-	await walk(async ({ svgIdentifier }) => {
+	await walk(async svgIdentifier => {
 		// generate `Icon.js` in root folder
 		await fs.writeFile(
 			path.resolve(__dirname, `../${svgIdentifier}.js`),
