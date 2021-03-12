@@ -1,6 +1,6 @@
 {
   "name": "@kite-design/icons-svg",
-  "version": "0.0.2",
+  "version": "0.0.3-alpha.0",
   "sideEffects": false,
   "license": "MIT",
   "main": "lib/index.js",
