@@ -46,7 +46,7 @@ const Icon = defineComponent({
 			}
 			if (slots.default) {
 				warning(
-					Boolean(viewBox),
+					Boolean(viewBox) || (slots.default().length === 1 && slots.default()[0] && slots.default()[0].type === 'use'),
 					'Make sure that you provide correct `viewBox`' +
 					' prop (default `0 0 1024 1024`) to the icon.',
 				);
