@@ -1,5 +1,5 @@
 import { defineComponent } from 'vue'
-import { Alipay,CirclePlus } from '../src'
+import { Alipay } from '../src'
 
 export default defineComponent({
 	setup () {
