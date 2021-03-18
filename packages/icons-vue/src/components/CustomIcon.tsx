@@ -9,7 +9,7 @@ const Icon = defineComponent({
 			default: false,
 		},
 		rotate: Number,
-		component: [ Function as PropType<Component>, Object as PropType<Component> ],
+		component: [ Function, Object ] as PropType<Component>,
 		viewBox: String,
 	},
 	setup (props, { slots }) {
@@ -38,6 +38,7 @@ const Icon = defineComponent({
 		useInsertStyles()
 		const renderInnerNode = () => {
 			if (Component) {
+				// @ts-ignore
 				return <Component {...innerSvgProps}/>
 			}
 			if (slotsComponent) {

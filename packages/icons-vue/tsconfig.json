@@ -8,8 +8,11 @@
 		"jsx": "preserve",
 		"esModuleInterop": true
 	},
-	"exclude": [
-		"node_modules",
-		"config",
+	"include": [
+		"examples/**/*",
+		"src/vue-tsx-shim.d.ts"
 	],
+	"exclude": [
+		"config"
+	]
 }
