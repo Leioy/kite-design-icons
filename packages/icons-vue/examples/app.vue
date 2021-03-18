@@ -1,19 +1,13 @@
 <template>
-	<Alipay class="xxx" :rotate="180" @click="handleClick"></Alipay>
+	<Basic></Basic>
+	<CustomIcon></CustomIcon>
 </template>
 <script>
 import { defineComponent } from 'vue'
-import Alipay from '../src/icons/Alipay'
+import Basic from './basic.vue'
+import CustomIcon from './customIcon.vue'
 
 export default defineComponent({
-	components: { Alipay },
-	setup () {
-		const handleClick = (e) => {
-			console.log(e.target)
-		}
-		return {
-			handleClick,
-		}
-	},
+	components: { Basic, CustomIcon },
 })
 </script>

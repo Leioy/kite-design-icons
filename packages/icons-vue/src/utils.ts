@@ -2,6 +2,17 @@ import { h, nextTick } from 'vue'
 import { insertCss } from 'insert-css'
 import { AbstractNode } from '@kite-design/icons-svg/lib/types'
 
+export function warn (valid: boolean, message: string): void {
+	// Support uglify
+	if (process.env.NODE_ENV !== 'production' && !valid && console !== undefined) {
+		console.error(`Warning: ${message}`);
+	}
+}
+
+export function warning (valid: boolean, message: string): void {
+	warn(valid, `[@kite-design/icons-vue] ${message}`);
+}
+
 export interface Attrs {
 	[key: string]: string
 }
