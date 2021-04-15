@@ -63,6 +63,7 @@ ${entryText}
 }
 
 async function generateEntries () {
+	console.log(333)
 	const render = template(`
 'use strict';
   Object.defineProperty(exports, "__esModule", {
