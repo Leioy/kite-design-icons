@@ -1,6 +1,6 @@
 {
 	"name": "@kite-design/icons-react",
-	"version": "0.0.3-alpha.0",
+	"version": "0.0.3",
 	"main": "./lib/index.js",
 	"module": "./es/index.js",
 	"unpkg": "./dist/index.umd.js",
@@ -37,7 +37,7 @@
 	},
 	"dependencies": {
 		"@babel/runtime": "^7.11.2",
-		"@kite-design/icons-svg": "^0.0.3-alpha.0",
+		"@kite-design/icons-svg": "^0.0.3",
 		"clsx": "^1.1.1",
 		"insert-css": "^2.0.0"
 	}

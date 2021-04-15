@@ -1,6 +1,6 @@
 {
   "name": "icons-vue",
-  "version": "1.0.0",
+  "version": "1.0.1-0.01.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -29,7 +29,7 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
-    "@kite-design/icons-svg": "^0.0.3-alpha.0",
+    "@kite-design/icons-svg": "^0.0.3",
     "insert-css": "^2.0.0"
   }
 }
